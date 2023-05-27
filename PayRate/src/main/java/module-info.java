@@ -7,4 +7,8 @@ module com.hse.java.payrate {
 
     opens com.hse.java.payrate to javafx.fxml;
     exports com.hse.java.payrate;
+    exports com.hse.java.payrate.login;
+    opens com.hse.java.payrate.login to javafx.fxml;
+    exports com.hse.java.payrate.navigation;
+    opens com.hse.java.payrate.navigation to javafx.fxml;
 }
