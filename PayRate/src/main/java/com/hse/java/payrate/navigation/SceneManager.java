@@ -6,25 +6,21 @@ import javafx.stage.Stage;
 import java.util.Stack;
 
 public class SceneManager {
-    private final Stack<Scene> sceneStack;
-    private final Stage primaryStage;
+    private static final Stack<Scene> sceneStack = new Stack<>();
+    public static Stage primaryStage;
 
-    public SceneManager(Stage stage) {
-        this.primaryStage = stage;
-        sceneStack = new Stack<>();
-    }
 
-    public void pushScene(Scene scene) {
+    public static void pushScene(Scene scene) {
         sceneStack.push(scene);
         showScene(scene);
     }
 
-    public void popScene() {
+    public static void popScene() {
         sceneStack.pop();
         showScene(sceneStack.peek());
     }
 
-    private void showScene(Scene scene) {
+    private static void showScene(Scene scene) {
         primaryStage.setScene(scene);
         primaryStage.show();
     }

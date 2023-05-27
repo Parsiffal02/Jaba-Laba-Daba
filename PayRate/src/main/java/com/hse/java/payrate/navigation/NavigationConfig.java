@@ -6,8 +6,8 @@ import javafx.scene.Scene;
 import java.io.IOException;
 
 public class NavigationConfig {
-    public static final String LOGIN_SCREEN = "login.fxml";
-    public static final String SIGN_UP_SCREEN = "signUp.fxml";
+    public static final String LOGIN_SCREEN = "Login.fxml";
+    public static final String SIGN_UP_SCREEN = "Registration.fxml";
     private static final Class<PayRateApplication> applicationClass = PayRateApplication.class;
 
 

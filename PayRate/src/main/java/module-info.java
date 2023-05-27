@@ -11,4 +11,6 @@ module com.hse.java.payrate {
     opens com.hse.java.payrate.login to javafx.fxml;
     exports com.hse.java.payrate.navigation;
     opens com.hse.java.payrate.navigation to javafx.fxml;
+    exports com.hse.java.payrate.sign_up to javafx.fxml;
+    opens com.hse.java.payrate.sign_up to javafx.fxml;
 }
