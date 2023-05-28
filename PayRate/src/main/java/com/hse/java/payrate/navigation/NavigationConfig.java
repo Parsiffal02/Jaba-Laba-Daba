@@ -8,6 +8,8 @@ import java.io.IOException;
 public class NavigationConfig {
     public static final String LOGIN_SCREEN = "Login.fxml";
     public static final String SIGN_UP_SCREEN = "Registration.fxml";
+
+    public static final String MAIN_SCREEN = "Main.fxml";
     private static final Class<PayRateApplication> applicationClass = PayRateApplication.class;
 
 
