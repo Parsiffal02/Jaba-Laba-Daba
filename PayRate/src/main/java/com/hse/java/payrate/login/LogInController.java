@@ -25,6 +25,9 @@ public class LogInController {
     Label signUpLabel;
 
     @FXML
+    Label test;
+
+    @FXML
     private void logIn() throws IOException {
         if (loginTextField.getText().isEmpty()) {
             logInResultLabel.setText("Введите логин");
