@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: #1D203E;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.hse.java.payrate.calculator.CalcController">
+    <children>
+        <AnchorPane prefHeight="64.0" prefWidth="1280.0" style="-fx-background-color: #2C2F48;">
+            <children>
+                <ButtonBar layoutX="14.0" layoutY="12.0" prefHeight="40.0" prefWidth="74.0" style="-fx-background-radius: 10;">
+                    <buttons>
+                        <Button fx:id="back_button" mnemonicParsing="false" prefHeight="36.0" prefWidth="120.0" style="-fx-background-color: #1D203E; -fx-border-radius: 10;" text="Назад" textFill="WHITE">
+                            <font>
+                                <Font name="Arial" size="16.0" />
+                            </font>
+                        </Button>
+                    </buttons>
+                </ButtonBar>
+                <AnchorPane layoutX="428.0" layoutY="12.0" prefHeight="36.0" prefWidth="360.0" style="-fx-background-color: #1D203E; -fx-background-radius: 5;">
+                    <children>
+                        <Label layoutX="30.0" layoutY="-4.0" prefHeight="36.0" prefWidth="360.0" style="-fx-border-radius: 10;" text="Калькулятор зарплаты" textAlignment="CENTER" textFill="WHITE">
+                            <font>
+                                <Font name="MS Reference Specialty" size="30.0" />
+                            </font>
+                        </Label>
+                    </children>
+                </AnchorPane>
+            </children>
+        </AnchorPane>
+        <AnchorPane layoutX="433.0" layoutY="176.0" prefHeight="36.0" prefWidth="300.0" style="-fx-background-color: #B69FF9; -fx-background-radius: 5;">
+            <children>
+                <Label layoutX="21.0" layoutY="-12.0" prefHeight="55.0" prefWidth="300.0" style="-fx-border-radius: 10;" text="Введите параметры рассчёта" textAlignment="CENTER">
+                    <font>
+                        <Font name="MS Reference Specialty" size="21.0" />
+                    </font>
+                </Label>
+            </children>
+        </AnchorPane>
+        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+        <TextField fx:id="zp_field" layoutX="50.0" layoutY="260.0" prefHeight="55.0" prefWidth="260.0" promptText="Оклад">
+            <font>
+                <Font name="Arial" size="12.0" />
+            </font></TextField>
+        <TextField fx:id="work_hour_field" layoutX="881.0" layoutY="260.0" prefHeight="55.0" prefWidth="260.0" promptText="Колличество отработанных часов" />
+        <TextField fx:id="hol_hour_field" layoutX="50.0" layoutY="367.0" prefHeight="55.0" prefWidth="260.0" promptText="Колличество выходных">
+            <font>
+                <Font name="Arial" size="12.0" />
+            </font></TextField>
+        <AnchorPane layoutX="50.0" layoutY="573.0" prefHeight="60.0" prefWidth="160.0" style="-fx-background-color: #B69FF9; -fx-background-radius: 5;">
+            <children>
+                <Button fx:id="sum_button" mnemonicParsing="false" prefHeight="102.0" prefWidth="275.0" style="-fx-background-color: #2C2F48; -fx-background-color: 10;" text="Вычислить зарплату">
+                    <font>
+                        <Font name="Arial" size="16.0" />
+                    </font>
+                </Button>
+            </children>
+        </AnchorPane>
+        <CheckBox fx:id="nalog_choice" layoutX="468.0" layoutY="367.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="260.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 5;" text="Налог" />
+        <ComboBox fx:id="nalog_prof_choice" layoutX="50.0" layoutY="470.0" prefHeight="55.0" prefWidth="260.0" promptText="Отчисления в профсоюз" />
+        <CheckBox fx:id="nalog_soc_choice" layoutX="881.0" layoutY="367.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="260.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 5;" text="Социальное страхование" />
+        <TextField fx:id="hour_field" layoutX="468.0" layoutY="260.0" prefHeight="55.0" prefWidth="260.0" promptText="Колличество часов работы">
+            <font>
+                <Font name="Arial" size="12.0" />
+            </font>
+        </TextField>
+        <ComboBox fx:id="nalog_prof_choice1" layoutX="168.0" layoutY="91.0" prefHeight="40.0" prefWidth="284.0" promptText="Выберите компанию" style="-fx-background-color: #B69FF9;" />
+        <ComboBox fx:id="nalog_prof_choice11" layoutX="743.0" layoutY="91.0" prefHeight="40.0" prefWidth="284.0" promptText="Выберете сотрудника" style="-fx-background-color: #B69FF9;" />
+        <ComboBox fx:id="nalog_prof_choice2" layoutX="468.0" layoutY="470.0" onAction="#Select" prefHeight="55.0" prefWidth="260.0" promptText="Премия" />
+        <DatePicker layoutX="881.0" layoutY="470.0" prefHeight="55.0" prefWidth="260.0" style="-fx-background-radius: 5;" />
+        <TextField layoutX="890.0" layoutY="584.0" prefHeight="79.0" prefWidth="250.0" text="Итого">
+            <font>
+                <Font name="MS Reference Specialty" size="26.0" />
+            </font>
+        </TextField>
+    </children>
+</AnchorPane>
