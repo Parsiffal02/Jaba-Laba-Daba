@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="600.0" style="-fx-background-color: #1D203E;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.settingsController">
+   <children>
+      <Label alignment="CENTER" layoutX="61.0" layoutY="14.0" prefHeight="62.0" prefWidth="122.0" style="-fx-background-color: #2C2F48;" text="Настройки" textAlignment="JUSTIFY" textFill="WHITE" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Button fx:id="back" layoutX="421.0" layoutY="260.0" mnemonicParsing="false" style="-fx-background-color: #B69FF9;" text="Назад" AnchorPane.bottomAnchor="15.0" AnchorPane.rightAnchor="50.0" />
+      <Button fx:id="exitAcc" layoutX="69.0" layoutY="106.0" mnemonicParsing="false" style="-fx-background-color: #B69FF9;" text="Выйти из аккаунта" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="800.0" AnchorPane.topAnchor="120.0">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+      <Button fx:id="addOrg" layoutX="65.0" layoutY="150.0" mnemonicParsing="false" style="-fx-background-color: #B69FF9;" text="Добавить организацию" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="800.0" AnchorPane.topAnchor="240.0">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
