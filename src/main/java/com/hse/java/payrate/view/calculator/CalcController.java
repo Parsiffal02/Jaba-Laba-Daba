@@ -1,11 +1,11 @@
 package com.hse.java.payrate.view.calculator;
+
 import com.hse.java.payrate.view.navigation.SceneManager;
 import javafx.application.Platform;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 
 import java.net.URL;
@@ -105,7 +105,7 @@ public class CalcController {
                     nalog_soc_choice = 1.3;
                     salary = (((zp / hf * whf - hhf) + ((zp / hf * whf - hhf) * (premia_choice1 / 100))) - ((zp / hf * whf - hhf) + ((zp / hf * whf - hhf) * (premia_choice1 / 100)) * (premia_choice1 / 100)) * (nalog_prof_choice1 + nalog_soc_choice + nalog_choice));
                 }
-                salary_lable.setText("Зарплата: " + salary);
+                salary_lable.setText("Зарплата: " + Math.abs(salary));
             });
         });
     }
