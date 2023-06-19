@@ -50,7 +50,7 @@
 <?import javafx.scene.paint.Color?>
 <?import javafx.scene.text.Font?>
 
-<VBox prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+<VBox prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.hse.java.payrate.login.SidePannelsController">
   <children>
     <MenuBar style="-fx-background-color: #B397FD;" VBox.vgrow="NEVER">
       <menus>
@@ -82,12 +82,13 @@
               </font>
             </Label>
                   <Pane layoutY="-2.0" styleClass="backgroundColor" stylesheets="@style2.css" />
-                  <Button layoutX="28.0" layoutY="50.0" minHeight="35.0" minWidth="166.0" mnemonicParsing="false" style="-fx-background-color: #7452D4;" text="Компания" textFill="WHITE" />
-                  <Button layoutX="28.0" layoutY="109.0" minHeight="35.0" minWidth="166.0" mnemonicParsing="false" style="-fx-background-color: #7452D4;" text="Сотрудники" textFill="WHITE" />
-                  <Button layoutX="28.0" layoutY="164.0" minHeight="35.0" minWidth="166.0" mnemonicParsing="false" style="-fx-background-color: #7452D4;" text="Калькулятор" textFill="WHITE" />
-                  <Button layoutX="28.0" layoutY="219.0" minHeight="35.0" minWidth="166.0" mnemonicParsing="false" style="-fx-background-color: #7452D4;" text="Отчетность" textFill="WHITE" />
-                  <Button layoutX="28.0" layoutY="275.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="166.0" style="-fx-background-color: #7452D4;" text="Настройки" textFill="WHITE" />
+                  <Button fx:id="Mainscreen" layoutX="28.0" layoutY="66.0" minHeight="35.0" minWidth="166.0" mnemonicParsing="false" style="-fx-background-color: #7452D4;" text="Главный экран" textFill="WHITE" />
+                  <Button layoutX="28.0" layoutY="170.0" minHeight="35.0" minWidth="166.0" mnemonicParsing="false" style="-fx-background-color: #7452D4;" text="Сотрудники" textFill="WHITE" />
+                  <Button layoutX="28.0" layoutY="226.0" minHeight="35.0" minWidth="166.0" mnemonicParsing="false" style="-fx-background-color: #7452D4;" text="Калькулятор" textFill="WHITE" />
+                  <Button layoutX="28.0" layoutY="281.0" minHeight="35.0" minWidth="166.0" mnemonicParsing="false" style="-fx-background-color: #7452D4;" text="Отчетность" textFill="WHITE" />
+                  <Button layoutX="24.0" layoutY="337.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="166.0" style="-fx-background-color: #7452D4;" text="Настройки" textFill="WHITE" />
                   <Button layoutX="2.0" layoutY="536.0" mnemonicParsing="false" style="-fx-background-color: #2C2F48;" text="Выход" textFill="WHITE" />
+                  <Button fx:id="Company" layoutX="28.0" layoutY="116.0" minHeight="35.0" minWidth="166.0" mnemonicParsing="false" style="-fx-background-color: #7452D4;" text="Компания" textFill="WHITE" />
           </children>
         </AnchorPane>
         <ScrollPane prefHeight="-1.0" prefWidth="-1.0">
