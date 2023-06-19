@@ -19,7 +19,7 @@
             <children>
                 <ButtonBar layoutX="14.0" layoutY="12.0" prefHeight="40.0" prefWidth="74.0" style="-fx-background-radius: 10;">
                     <buttons>
-                        <Button fx:id="back_button" onAction="#exit" mnemonicParsing="false" prefHeight="36.0" prefWidth="120.0" style="-fx-background-color: #1D203E; -fx-border-radius: 10;" text="Назад" textFill="WHITE">
+                        <Button fx:id="back_button" mnemonicParsing="false" onAction="#exit" prefHeight="36.0" prefWidth="120.0" style="-fx-background-color: #1D203E; -fx-border-radius: 10;" text="Назад" textFill="WHITE">
                             <font>
                                 <Font name="Arial" size="16.0" />
                             </font>
@@ -69,26 +69,26 @@
         <ComboBox fx:id="nalog_prof_choice" layoutX="50.0" layoutY="470.0" prefHeight="55.0" prefWidth="260.0" promptText="Отчисления в профсоюз">
             <items>
                 <FXCollections fx:factory="observableArrayList">
-                    <String fx:value="5%" />
-                    <String fx:value="10%" />
-                    <String fx:value="15%" />
-                    <String fx:value="20%" />
-                    <String fx:value="25%" />
-                    <String fx:value="30%" />
-                    <String fx:value="35%" />
-                    <String fx:value="40%" />
-                    <String fx:value="45%" />
-                    <String fx:value="50%" />
-                    <String fx:value="55%" />
-                    <String fx:value="60%" />
-                    <String fx:value="65%" />
-                    <String fx:value="70%" />
-                    <String fx:value="75%" />
-                    <String fx:value="80%" />
-                    <String fx:value="85%" />
-                    <String fx:value="90%" />
-                    <String fx:value="95%" />
-                    <String fx:value="100%" />
+                    <String fx:value="5" />
+                    <String fx:value="10" />
+                    <String fx:value="15" />
+                    <String fx:value="20" />
+                    <String fx:value="25" />
+                    <String fx:value="30" />
+                    <String fx:value="35" />
+                    <String fx:value="40" />
+                    <String fx:value="45" />
+                    <String fx:value="50" />
+                    <String fx:value="55" />
+                    <String fx:value="60" />
+                    <String fx:value="65" />
+                    <String fx:value="70" />
+                    <String fx:value="75" />
+                    <String fx:value="80" />
+                    <String fx:value="85" />
+                    <String fx:value="90" />
+                    <String fx:value="95" />
+                    <String fx:value="100" />
                 </FXCollections>
             </items>
         </ComboBox>
@@ -121,39 +121,39 @@
         <ComboBox fx:id="premia_choice" layoutX="468.0" layoutY="470.0" onAction="#Select" prefHeight="55.0" prefWidth="260.0" promptText="Премия">
             <items>
                 <FXCollections fx:factory="observableArrayList">
-                    <String fx:value="5%" />
-                    <String fx:value="10%" />
-                    <String fx:value="15%" />
-                    <String fx:value="20%" />
-                    <String fx:value="25%" />
-                    <String fx:value="30%" />
-                    <String fx:value="35%" />
-                    <String fx:value="40%" />
-                    <String fx:value="45%" />
-                    <String fx:value="50%" />
-                    <String fx:value="55%" />
-                    <String fx:value="60%" />
-                    <String fx:value="65%" />
-                    <String fx:value="70%" />
-                    <String fx:value="75%" />
-                    <String fx:value="80%" />
-                    <String fx:value="85%" />
-                    <String fx:value="90%" />
-                    <String fx:value="95%" />
-                    <String fx:value="100%" />
+                    <String fx:value="5" />
+                    <String fx:value="10" />
+                    <String fx:value="15" />
+                    <String fx:value="20" />
+                    <String fx:value="25" />
+                    <String fx:value="30" />
+                    <String fx:value="35" />
+                    <String fx:value="40" />
+                    <String fx:value="45" />
+                    <String fx:value="50" />
+                    <String fx:value="55" />
+                    <String fx:value="60" />
+                    <String fx:value="65" />
+                    <String fx:value="70" />
+                    <String fx:value="75" />
+                    <String fx:value="80" />
+                    <String fx:value="85" />
+                    <String fx:value="90" />
+                    <String fx:value="95" />
+                    <String fx:value="100" />
                 </FXCollections>
             </items>
         </ComboBox>
         <DatePicker layoutX="881.0" layoutY="470.0" prefHeight="55.0" prefWidth="260.0" style="-fx-background-radius: 5;" />
-        <Label fx:id="salary_lable" layoutX="576.0" layoutY="588.0" prefHeight="70.0" prefWidth="240.0" style="-fx-background-color: #FFFFFF;">
+        <Label fx:id="salary_lable" layoutX="885.0" layoutY="579.0" prefHeight="70.0" prefWidth="240.0" style="-fx-background-color: #FFFFFF;">
             <font>
-                <Font size="48.0" />
+                <Font size="16.0" />
             </font>
         </Label>
-        <TextField layoutX="890.0" layoutY="584.0" prefHeight="79.0" prefWidth="250.0" text="Итого">
-            <font>
-                <Font name="MS Reference Specialty" size="26.0" />
-            </font>
-        </TextField>
+      <Text fill="WHITE" layoutX="728.0" layoutY="625.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Итого:" wrappingWidth="85.60000000000002">
+         <font>
+            <Font name="MS Reference Specialty" size="28.0" />
+         </font>
+      </Text>
     </children>
 </AnchorPane>
