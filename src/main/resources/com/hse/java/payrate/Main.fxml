@@ -33,6 +33,7 @@
 -->
 
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Menu?>
 <?import javafx.scene.control.MenuBar?>
@@ -40,6 +41,8 @@
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.SeparatorMenuItem?>
 <?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.Pane?>
@@ -47,11 +50,11 @@
 <?import javafx.scene.paint.Color?>
 <?import javafx.scene.text.Font?>
 
-<VBox prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<VBox prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
   <children>
-    <MenuBar VBox.vgrow="NEVER">
+    <MenuBar style="-fx-background-color: #B397FD;" VBox.vgrow="NEVER">
       <menus>
-        <Menu mnemonicParsing="false" text="File">
+        <Menu mnemonicParsing="false" text="С возвращением пользователь!">
           <items>
             <MenuItem mnemonicParsing="false" text="New" />
             <MenuItem mnemonicParsing="false" text="Open…" />
@@ -67,58 +70,82 @@
             <MenuItem mnemonicParsing="false" text="Quit" />
           </items>
         </Menu>
-        <Menu mnemonicParsing="false" text="Edit">
-          <items>
-            <MenuItem mnemonicParsing="false" text="Undo" />
-            <MenuItem mnemonicParsing="false" text="Redo" />
-            <SeparatorMenuItem mnemonicParsing="false" />
-            <MenuItem mnemonicParsing="false" text="Cut" />
-            <MenuItem mnemonicParsing="false" text="Copy" />
-            <MenuItem mnemonicParsing="false" text="Paste" />
-            <MenuItem mnemonicParsing="false" text="Delete" />
-            <SeparatorMenuItem mnemonicParsing="false" />
-            <MenuItem mnemonicParsing="false" text="Select All" />
-            <MenuItem mnemonicParsing="false" text="Unselect All" />
-          </items>
-        </Menu>
-        <Menu mnemonicParsing="false" text="Help">
-          <items>
-            <MenuItem mnemonicParsing="false" text="About MyHelloApp" />
-          </items>
-        </Menu>
       </menus>
     </MenuBar>
     <SplitPane dividerPositions="0.2505567928730512, 0.7505567928730512" focusTraversable="true" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
       <items>
-        <AnchorPane>
+        <AnchorPane maxHeight="820.0" maxWidth="400.0" styleClass="backgroundColor" stylesheets="@style2.css">
           <children>
-            <Label alignment="CENTER" layoutX="14.0" layoutY="14.0" minWidth="60.0" prefWidth="-1.0" style="&#10;" text="Master" textAlignment="CENTER" wrapText="false">
+            <Label alignment="CENTER" layoutX="14.0" layoutY="14.0" minWidth="60.0" prefWidth="-1.0" style="&#10;" text="Pay Rate" textAlignment="CENTER" textFill="WHITE" wrapText="false">
               <font>
                 <Font size="18.0" fx:id="x1" />
               </font>
-              <textFill>
-                <Color red="0.624" green="0.624" blue="0.624" fx:id="x2" />
-              </textFill>
             </Label>
+                  <Pane layoutY="-2.0" styleClass="backgroundColor" stylesheets="@style2.css" />
+                  <Button layoutX="28.0" layoutY="50.0" minHeight="35.0" minWidth="166.0" mnemonicParsing="false" style="-fx-background-color: #7452D4;" text="Компания" textFill="WHITE" />
+                  <Button layoutX="28.0" layoutY="109.0" minHeight="35.0" minWidth="166.0" mnemonicParsing="false" style="-fx-background-color: #7452D4;" text="Сотрудники" textFill="WHITE" />
+                  <Button layoutX="28.0" layoutY="164.0" minHeight="35.0" minWidth="166.0" mnemonicParsing="false" style="-fx-background-color: #7452D4;" text="Калькулятор" textFill="WHITE" />
+                  <Button layoutX="28.0" layoutY="219.0" minHeight="35.0" minWidth="166.0" mnemonicParsing="false" style="-fx-background-color: #7452D4;" text="Отчетность" textFill="WHITE" />
+                  <Button layoutX="28.0" layoutY="275.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="166.0" style="-fx-background-color: #7452D4;" text="Настройки" textFill="WHITE" />
+                  <Button layoutX="2.0" layoutY="536.0" mnemonicParsing="false" style="-fx-background-color: #2C2F48;" text="Выход" textFill="WHITE" />
           </children>
         </AnchorPane>
         <ScrollPane prefHeight="-1.0" prefWidth="-1.0">
           <content>
-            <AnchorPane id="Content" minHeight="-1.0" minWidth="-1.0" prefHeight="545.0" prefWidth="430.0">
+            <AnchorPane id="Content" minHeight="820.0" minWidth="860.0" style="-fx-background-color: #2C2F48;">
               <children>
-                <Label alignment="CENTER" font="$x1" layoutX="14.0" layoutY="14.0" style="&#10;" text="View" textAlignment="CENTER" textFill="$x2" wrapText="false" />
+                <Label alignment="CENTER" font="$x1" layoutX="14.0" layoutY="14.0" style="&#10;" text="View" textAlignment="CENTER" wrapText="false" />
               </children>
             </AnchorPane>
           </content>
         </ScrollPane>
-        <AnchorPane>
+        <AnchorPane styleClass="backgroundColor" stylesheets="@style2.css">
           <children>
-            <Label alignment="CENTER" font="$x1" layoutX="14.0" layoutY="14.0" style="&#10;" text="Details" textAlignment="CENTER" textFill="$x2" wrapText="false" />
+            <Label alignment="CENTER" layoutX="88.0" layoutY="25.0" style="&#10;" text="Егор" textAlignment="CENTER" textFill="WHITE" wrapText="false">
+                     <font>
+                        <Font name="MS Reference Specialty" size="18.0" />
+                     </font></Label>
+                  <Pane styleClass="backgroundColor" stylesheets="@style2.css" />
+                  <Label alignment="CENTER" layoutX="69.0" layoutY="173.0" minWidth="60.0" prefWidth="-1.0" style="&#10;" text="Статистика" textAlignment="CENTER" textFill="WHITE" wrapText="false">
+                     <font>
+                        <Font size="15.0" fx:id="x11" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" layoutX="75.0" layoutY="304.0" minWidth="60.0" prefWidth="-1.0" style="&#10;" text="Отчетность" textAlignment="CENTER" textFill="WHITE" wrapText="false">
+                     <font>
+                        <Font size="15.0" fx:id="x111" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="78.0" fitWidth="105.0" layoutX="62.0" layoutY="204.0">
+                     <image>
+                        <Image url="@Статистика.jpg" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="35.0" fitWidth="117.0" layoutX="56.0" layoutY="341.0">
+                     <image>
+                        <Image url="@Отчет 1.jpg" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="35.0" fitWidth="117.0" layoutX="56.0" layoutY="392.0">
+                     <image>
+                        <Image url="@Отчет 1.jpg" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="35.0" fitWidth="117.0" layoutX="56.0" layoutY="443.0">
+                     <image>
+                        <Image url="@Отчет 1.jpg" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="105.0" fitWidth="105.0" layoutX="59.0" layoutY="62.0">
+                     <image>
+                        <Image url="@аватар.png" />
+                     </image>
+                  </ImageView>
           </children>
         </AnchorPane>
       </items>
     </SplitPane>
-    <HBox id="HBox" alignment="CENTER_LEFT" spacing="5.0" VBox.vgrow="NEVER">
+    <HBox id="HBox" alignment="CENTER_LEFT" spacing="5.0" stylesheets="@style2.css" VBox.vgrow="NEVER">
       <children>
         <Label maxHeight="1.7976931348623157E308" maxWidth="-1.0" text="Left status" HBox.hgrow="ALWAYS">
           <font>

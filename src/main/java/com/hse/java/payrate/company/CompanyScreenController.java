@@ -1,9 +1,18 @@
 package com.hse.java.payrate.company;
 
+import com.hse.java.payrate.navigation.NavigationConfig;
+import com.hse.java.payrate.navigation.SceneManager;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
+import javafx.stage.Stage;
+import java.io.IOException;
 public class CompanyScreenController {
     @FXML
     private TextField CompanyName;
@@ -45,6 +54,9 @@ public class CompanyScreenController {
     private TextField BossName;
 
     @FXML
+    private TextField BossPosition;
+
+    @FXML
     private TextField BossFathersName;
 
     @FXML
@@ -55,9 +67,14 @@ public class CompanyScreenController {
 
     @FXML
     private Button Cancel;
-
     @FXML
     private Button Exit;
+    @FXML
+    private TextField dataWrite;
+
+    private ObservableList<String> company_data;
+    @FXML
+    private ListView<String> dataList;
 
     @FXML
     void Select(ActionEvent event) {
@@ -73,15 +90,29 @@ public class CompanyScreenController {
         String fss = FSS.getText().trim();
         String avance_day = AvanceDay.getText().trim();
         String cash_day = CashDay.getText().trim();
+        String boss_position = BossPosition.getText().trim();
         String boss_surname = BossSurname.getText().trim();
         String boss_name = BossName.getText().trim();
         String boss_fathersname = BossFathersName.getText().trim();
-
-        OK.setOnAction(Event -> {
-        });
-        Cancel.setOnAction(Event -> {
-        });
-        Exit.setOnAction(Event -> {
-        });
     }
-}
+
+    @FXML
+    void initialize() {
+
+        Requisites.setOnAction(Event -> {
+            Requisites.getScene().getWindow().hide();
+            FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(getClass().getResource("company_requisites.fxml"));
+            try {
+                loader.load();
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
+            Parent root = loader.getRoot();
+            Stage stage = new Stage();
+            stage.setScene(new Scene(root));
+            stage.showAndWait();
+        });
+
+    }
+    }

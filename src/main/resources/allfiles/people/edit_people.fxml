@@ -109,24 +109,12 @@
             <Font name="MS Reference Specialty" size="20.0" />
          </font>
       </Button>
-      <ImageView fitHeight="93.0" fitWidth="94.0" layoutX="803.0" layoutY="193.0">
-         <image>
-            <Image url="@exit.png" />
-         </image>
-      </ImageView>
       <TextField layoutX="347.0" layoutY="410.0" prefHeight="38.0" prefWidth="414.0" style="-fx-background-color: #C9B8FC;" text="Отчисления в профсоюз">
          <font>
             <Font size="16.0" />
          </font>
       </TextField>
       <Button mnemonicParsing="false" style="-fx-background-color: #2C2F48; -fx-background-radius: 6;" textFill="WHITE">
-         <graphic>
-            <ImageView>
-               <image>
-                  <Image url="@exit.png" />
-               </image>
-            </ImageView>
-         </graphic>
       </Button>
       <ButtonBar prefHeight="40.0" prefWidth="200.0" />
       <TextField layoutX="125.0" layoutY="342.0" prefHeight="36.0" prefWidth="187.0" style="-fx-background-color: #C9B8FC;" text="Гражданство">

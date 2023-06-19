@@ -4,6 +4,7 @@ module com.hse.java.payrate {
 
     requires org.controlsfx.controls;
     requires org.kordamp.bootstrapfx.core;
+    requires java.desktop;
 
     opens com.hse.java.payrate to javafx.fxml;
     exports com.hse.java.payrate;
