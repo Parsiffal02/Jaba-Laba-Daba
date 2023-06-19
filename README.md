@@ -1,4 +1,8 @@
-## Проект Pay Rate 
+## 
+
+https://github.com/Parsiffal02/Jaba-Laba-Daba/assets/114605247/925603ef-29fc-446e-838c-b5cb6eeac63b
+
+Проект Pay Rate 
 ### Расчет оплаты труда сотрудников для работодателя
 
 ## **Состав:**
