@@ -14,4 +14,6 @@ module com.hse.java.payrate {
     exports com.hse.java.payrate.view.sign_up to javafx.fxml;
     opens com.hse.java.payrate.view.sign_up to javafx.fxml;
     opens com.hse.java.payrate.data;
+    exports com.hse.java.payrate.data.model to firebase.admin;
+    opens com.hse.java.payrate.data.model to firebase.admin;
 }

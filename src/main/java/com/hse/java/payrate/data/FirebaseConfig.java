@@ -11,12 +11,13 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class FirebaseConfig {
+    public static final String DATABASE_URL = "https://payrate-116a8-default-rtdb.firebaseio.com/";
     public static void initialize() {
         try {
             FileInputStream serviceAccount = new FileInputStream("payratePrivateKey.json");
             FirebaseOptions options = new FirebaseOptions.Builder()
                     .setCredentials(GoogleCredentials.fromStream(serviceAccount))
-                    .setDatabaseUrl("https://payrate-116a8-default-rtdb.firebaseio.com/")
+                    .setDatabaseUrl(DATABASE_URL)
                     .build();
             FirebaseApp.initializeApp(options);
 

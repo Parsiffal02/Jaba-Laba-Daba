@@ -1,5 +1,6 @@
 package com.hse.java.payrate;
 
+import com.hse.java.payrate.data.Database;
 import com.hse.java.payrate.data.FirebaseConfig;
 import com.hse.java.payrate.view.navigation.NavigationConfig;
 import com.hse.java.payrate.view.navigation.SceneManager;

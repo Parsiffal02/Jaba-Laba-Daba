@@ -1,24 +1,28 @@
 package com.hse.java.payrate.view.sign_up;
 
 
+import com.hse.java.payrate.data.Database;
+import com.hse.java.payrate.data.FirebaseConfig;
 import com.hse.java.payrate.view.navigation.NavigationConfig;
 import com.hse.java.payrate.view.navigation.SceneManager;
+import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import com.hse.java.payrate.data.model.User;
 
 import java.io.IOException;
 
 public class SignUpController {
 
     @FXML
-    private TextField nameTextField;
+    public TextField nameTextField;
 
     @FXML
-    private TextField emailTextField;
+    public TextField emailTextField;
 
     @FXML
-    private TextField passwordTextField;
+    public TextField passwordTextField;
 
     @FXML
     private Label signUpResultLabel;
@@ -46,7 +50,10 @@ public class SignUpController {
             return;
         }
         if (!name.isEmpty() && !email.isEmpty() && !password.isEmpty()) {
-            SceneManager.pushScene(NavigationConfig.getScene(NavigationConfig.MAIN_SCREEN));
+            Database.signUp(new User(name, email, password));
+            Platform.runLater(() -> {
+                SceneManager.pushScene(NavigationConfig.getScene(NavigationConfig.LOGIN_SCREEN));
+            });
         }
     }
 }
