@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.text.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="720.0" prefWidth="1280.0" styleClass="backgroundColor" stylesheets="@style.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.hse.java.payrate.view.login.LogInController">
+<AnchorPane prefHeight="720.0" prefWidth="1280.0" styleClass="backgroundColor" stylesheets="@style.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.hse.java.payrate.view.login.LogInController">
    <TextField fx:id="loginTextField" layoutX="533.0" layoutY="247.0" prefHeight="44.0" prefWidth="215.0">
       <font>
          <Font name="Calibri" size="14.0" />
@@ -41,7 +44,7 @@
    </Label>
    <Label fx:id="logInResultLabel" alignment="CENTER" layoutX="533.0" layoutY="434.0" prefHeight="23.0" prefWidth="215.0" textAlignment="CENTER" textFill="#710da1">
       <font>
-         <Font size="12.0" />
+         <Font name="Calibri" size="18.0" />
       </font>
    </Label>
    <Label layoutX="597.0" layoutY="638.0" prefHeight="18.0" prefWidth="95.0" text="Нет аккаунта?" textFill="WHITE">
