@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="1280.0" prefWidth="720.0" style="-fx-background-color: #1D203E" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.hse.java.payrate.view.company_controllers.CompanyRequisitesController">
+    <Pane prefHeight="38.0" prefWidth="764.0" style="-fx-background-color: #2C2F48;">
+        <children>
+            <Label layoutX="345.0" prefHeight="39.0" prefWidth="720.0" text="Реквизиты" textFill="WHITE">
+                <font>
+                    <Font name="MS Reference Specialty" size="20.0" />
+                </font>
+            </Label>
+            <Button mnemonicParsing="false" style="-fx-background-color: #2C2F48; -fx-background-radius: 6;" textFill="WHITE" />
+        </children>
+    </Pane>
+    <TextField layoutX="125.0" layoutY="121.0" prefHeight="37.0" prefWidth="305.0" style="-fx-background-color: #C9B8FC;" text="Полное наименование">
+        <font>
+            <Font size="16.0" />
+        </font>
+    </TextField>
+    <TextField layoutX="125.0" layoutY="171.0" prefHeight="37.0" prefWidth="306.0" style="-fx-background-color: #C9B8FC;" text="Юридический адрес">
+        <font>
+            <Font size="16.0" />
+        </font>
+    </TextField>
+    <TextField layoutX="125.0" layoutY="453.0" prefHeight="37.0" prefWidth="306.0" style="-fx-background-color: #C9B8FC;" text="Почтовый адрес">
+        <font>
+            <Font size="16.0" />
+        </font>
+    </TextField>
+    <TextField layoutX="531.0" layoutY="395.0" prefHeight="38.0" prefWidth="187.0" style="-fx-background-color: #C9B8FC;" text="Электронная почта">
+        <font>
+            <Font size="16.0" />
+        </font>
+    </TextField>
+    <TextField layoutX="125.0" layoutY="281.0" prefHeight="37.0" prefWidth="306.0" style="-fx-background-color: #C9B8FC;" text="БИК">
+        <font>
+            <Font size="16.0" />
+        </font>
+    </TextField>
+    <TextField layoutX="123.0" layoutY="224.0" prefHeight="38.0" prefWidth="306.0" style="-fx-background-color: #C9B8FC;" text="Банк">
+        <font>
+            <Font size="16.0" />
+        </font>
+    </TextField>
+    <Button fx:id="OK" layoutX="550.0" layoutY="645.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="94.0" style="-fx-background-color: #B69FF9; -fx-background-radius: 5;" text="ок" textFill="#1d203e">
+        <font>
+            <Font name="MS Reference Specialty" size="20.0" />
+        </font>
+    </Button>
+    <Button fx:id="Cancel" layoutX="671.0" layoutY="645.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="93.0" style="-fx-background-color: #B69FF9; -fx-background-radius: 5;" text="отмена" textFill="#1d203e">
+        <font>
+            <Font name="MS Reference Specialty" size="20.0" />
+        </font>
+    </Button>
+    <TextField layoutX="531.0" layoutY="341.0" prefHeight="38.0" prefWidth="187.0" style="-fx-background-color: #C9B8FC;" text="Контактный телефон">
+        <font>
+            <Font size="16.0" />
+        </font>
+    </TextField>
+    <TextField layoutX="125.0" layoutY="340.0" prefHeight="37.0" prefWidth="306.0" style="-fx-background-color: #C9B8FC;" text="Рассчётный счёт">
+        <font>
+            <Font size="16.0" />
+        </font>
+    </TextField>
+    <TextField layoutX="125.0" layoutY="396.0" prefHeight="37.0" prefWidth="306.0" style="-fx-background-color: #C9B8FC;" text="Корреспондентский счёт">
+        <font>
+            <Font size="16.0" />
+        </font>
+    </TextField>
+    <TextField layoutX="531.0" layoutY="171.0" prefHeight="36.0" prefWidth="187.0" style="-fx-background-color: #C9B8FC;" text="Фамилия">
+        <font>
+            <Font size="16.0" />
+        </font>
+    </TextField>
+    <TextField layoutX="531.0" layoutY="225.0" prefHeight="36.0" prefWidth="187.0" style="-fx-background-color: #C9B8FC;" text="Имя">
+        <font>
+            <Font size="16.0" />
+        </font>
+    </TextField>
+    <TextField layoutX="531.0" layoutY="281.0" prefHeight="36.0" prefWidth="187.0" style="-fx-background-color: #C9B8FC;" text="Отчество">
+        <font>
+            <Font size="16.0" />
+        </font>
+    </TextField>
+    <Text fill="WHITE" layoutX="550.0" layoutY="147.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ген. директор" wrappingWidth="130.39998626708984">
+        <font>
+            <Font size="20.0" />
+        </font>
+    </Text>
+</AnchorPane>
