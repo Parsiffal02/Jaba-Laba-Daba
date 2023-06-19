@@ -1,20 +1,20 @@
 package com.hse.java.payrate.calculator;
-
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Button;
-import javafx.scene.control.CheckBox;
-import javafx.scene.control.ComboBox;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 
 import java.net.URL;
 import java.util.ResourceBundle;
 
 public class CalcController implements Initializable {
 
+    @FXML
+    private ComboBox<String> premia_choice;
+    @FXML
+    private ComboBox<String> employee_choice;
     @FXML
     private ResourceBundle resources;
 
@@ -31,22 +31,22 @@ public class CalcController implements Initializable {
     private TextField hour_field;
 
     @FXML
-    private CheckBox nalog_choice;
+    private CheckBox nalog_choice1;
 
     @FXML
-    private ComboBox<?> nalog_prof_choice;
+    private ComboBox<String> nalog_prof_choice;
 
     @FXML
     private ComboBox<String> premia;
 
     @FXML
-    private ComboBox<?> emploee_choice;
+    private ComboBox<String> emploee_choice;
 
     @FXML
-    private ComboBox<?> company_choice;
+    private ComboBox<String> company_choice;
 
     @FXML
-    private CheckBox nalog_soc_choice;
+    private CheckBox nalog_soc_choice1;
 
     @FXML
     private Button sum_button;
@@ -58,45 +58,55 @@ public class CalcController implements Initializable {
     private TextField zp_field;
 
     @FXML
-    void Select(ActionEvent event) {
+    private TextField salary_field;
 
-        String  zp = zp_field.getText().trim();
-        String  hf = hour_field.getText().trim();
-        String  whf = work_hour_field.getText().trim();
-        String  hhf = hol_hour_field.getText().trim();
-        double nalog_choice  ;
-        int zp1 = Integer.parseInt(zp.trim());
-        int hf1 = Integer.parseInt(hf.trim());
-        int whf1 = Integer.parseInt(whf.trim());
-        int hhf1 = Integer.parseInt(hhf.trim());
+    @FXML
+    private Label salary_label;
 
-        nalog_choice = 1.13;
-        sum_button.setOnAction(Event -> {
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+
+    }
 
 
+    @FXML
+    void initialize() {
+        sum_button.setOnAction(event -> {
+            salary_label.setText("Зарплата криво считается");
+            double zp = Double.parseDouble(zp_field.getText());
+            double hf = Double.parseDouble(hour_field.getText());
+            double whf = Double.parseDouble(work_hour_field.getText());
+            double hhf = Double.parseDouble(hol_hour_field.getText());
+            double premia_choice1 = Double.parseDouble(premia_choice.getValue());
+            double nalog_prof_choice1 = Double.parseDouble(nalog_prof_choice.getValue());
+            double nalog_choice = 0;
+            double salary = 0;
+
+            if (nalog_choice1.isSelected()) {
+                nalog_choice = 1.13;
+                salary = (((zp / hf * whf - hhf) + ((zp / hf * whf - hhf) * (premia_choice1 / 100))) - ((zp / hf * whf - hhf) + ((zp / hf * whf - hhf) * (premia_choice1 / 100)) * (premia_choice1 / 100)) * (nalog_prof_choice1 + nalog_choice));
+            }
+            double nalog_soc_choice = 0;
+            if (nalog_soc_choice1.isSelected()) {
+                nalog_soc_choice = 1.3;
+                salary = (((zp / hf * whf - hhf) + ((zp / hf * whf - hhf) * (premia_choice1 / 100))) - ((zp / hf * whf - hhf) + ((zp / hf * whf - hhf) * (premia_choice1 / 100)) * (premia_choice1 / 100)) * (nalog_prof_choice1 + nalog_soc_choice));
+            }
+            if (nalog_choice1.isSelected() && nalog_soc_choice1.isSelected()) {
+                nalog_choice = 1.13;
+                nalog_soc_choice = 1.3;
+                salary = (((zp / hf * whf - hhf) + ((zp / hf * whf - hhf) * (premia_choice1 / 100))) - ((zp / hf * whf - hhf) + ((zp / hf * whf - hhf) * (premia_choice1 / 100)) * (premia_choice1 / 100)) * (nalog_prof_choice1 + nalog_soc_choice + nalog_choice));
+            }
+            if (salary == 0) {
+                salary_label.setText("Зарплата криво считается ");
+            } else {
+                salary_label.setText("Зарплата: " + salary);
+            }
 
         });
 
-
     }
-    @FXML
-    private void nalog() {
-        double nc;
-        if (nalog_choice.isSelected()) {
-            nc = 1.13;
-        }
+    public void Select(ActionEvent actionEvent) {
     }
-    @FXML
-    private void nalog_soc_choice() {
-        double nsc;
-        if (nalog_choice.isSelected()) {
-            nsc = 1.3;
-        }
-    }
-
-    @Override
-    public void initialize(URL arg0, ResourceBundle arg1) {
-        ObservableList<String> list = FXCollections.observableArrayList("5%" ,"10%", "15%","20%","25%","30%","35%", "40%","45%","50%","55%","60%","65%","70%","75%","80%","85%","90%","95%","100%");
-        premia.setItems(list);
-    }/*String p = premia.getSelectionModel().getSelectedItem().toString();*/
 }
+
+
